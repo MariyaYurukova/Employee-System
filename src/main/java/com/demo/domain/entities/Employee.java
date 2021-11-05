@@ -13,7 +13,7 @@ public class Employee extends BaseEntity{
 
     private String firstName;
     private String lastName;
-    private Integer egn;
+    private String egn;
     private String position;
     private String email;
     private LocalDate startData;
@@ -42,14 +42,18 @@ public class Employee extends BaseEntity{
         this.lastName = lastName;
     }
 
+
     @Column(name = "EGN")
-    public Integer getEgn() {
+    public String getEgn() {
         return egn;
     }
 
-    public void setEgn(Integer egn) {
+    public void setEgn(String egn) {
         this.egn = egn;
     }
+
+
+
 
 
     @Column(name = "position")

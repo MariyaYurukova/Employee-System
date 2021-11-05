@@ -1,5 +1,7 @@
 package com.demo.domain.models.service;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDate;
 import java.util.Date;
 
@@ -10,7 +12,7 @@ public class EmployeeServiceModel {
     private String id;
     private String firstName;
     private String lastName;
-    private Integer egn;
+    private String egn;
     private String position;
     private String email;
     private LocalDate startData;
@@ -45,11 +47,11 @@ public class EmployeeServiceModel {
         this.lastName = lastName;
     }
 
-    public Integer getEgn() {
+    public String getEgn() {
         return egn;
     }
 
-    public void setEgn(Integer egn) {
+    public void setEgn(String egn) {
         this.egn = egn;
     }
 
@@ -69,6 +71,8 @@ public class EmployeeServiceModel {
         this.email = email;
     }
 
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     public LocalDate getStartData() {
         return startData;
     }
